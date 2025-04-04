@@ -41,6 +41,7 @@ function readCSV(path){
 		complete: function(data) {
 			console.log(data);
 			shops = data.data;
+            console.log(shops)
 			
 			// map the data	
 			mapCSV(shops, shopmarkers, '#1681c4', 'Shops');
@@ -65,6 +66,8 @@ function mapCSV(data, featuregroup, color, name){
 		fillColor: color,
 		fillOpacity: 1
 	}
+
+    console.log(data)
 
 	// loop through each entry
 	data.forEach(function(item,index){
