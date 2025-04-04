@@ -2,7 +2,15 @@ body {
     padding: 0;
     margin: 0;
 }
+
 html, body, #map {
     height: 100%;
+    width: 100vw;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&family=Poppins:wght@100;400;700&family=Syne+Mono&display=swap');
+
+.content {
+	height: 100%;
     width: 100vw;
 }
