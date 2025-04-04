@@ -40,7 +40,7 @@ function readCSV(path){
 		download: true,
 		complete: function(data) {
 			console.log(data);
-			shops = data;
+			shops = data.data;
 			
 			// map the data	
 			mapCSV(shops, shopmarkers, '#1681c4', 'Shops');
