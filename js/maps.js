@@ -58,19 +58,17 @@ function readCSV(path){
 
 function mapCSV(data, featuregroup, color, name){
 
-	// icon - EDIT
-	let circleOptions = {
-		radius: 5,
-		weight: 1,
-		color: 'white',
-		fillColor: color,
-		fillOpacity: 1
-	}
+	// icon
+	var shopIcon = L.icon({
+		iconUrl: 'icons/shops.png',
+		iconSize: [15,15]
+	})
+
 
 	// loop through each entry
 	data.forEach(function(item,index){
 		// create marker
-		let marker = L.circleMarker([item.Latitude,item.Longitude],circleOptions)
+		let marker = L.Marker([item.Latitude,item.Longitude],{icon: shopIcon})
 		.on('mouseover', function(){
 			this.bindPopup(`<h3>${item.Name}</h3><p>${item.Description}</p>`).openPopup()
 		})
