@@ -39,22 +39,22 @@ function readCSV(path){
 		header: true,
 		download: true,
 		complete: function(data) {
-			console.log(data);
-			shops = data.data;
-            console.log(shops)
-			
+			globaldata = data;
+			shops = globaldata.data;
+			console.log(shops.Latitude)
+
 			// map the data	
 			mapCSV(shops, shopmarkers, '#1681c4', 'Shops');
 
 			let layers = {
-				"Shops": shopmarkers,
+				"Shops": shopmarkers
 			};
 
 			L.control.layers(null, layers).addTo(map);
 
-		};
-	})
-};
+		}
+	});
+}
 
 function mapCSV(data, featuregroup, color, name){
 
@@ -65,9 +65,7 @@ function mapCSV(data, featuregroup, color, name){
 		color: 'white',
 		fillColor: color,
 		fillOpacity: 1
-	};
-
-    console.log(data)
+	}
 
 	// loop through each entry
 	data.forEach(function(item,index){
@@ -79,7 +77,7 @@ function mapCSV(data, featuregroup, color, name){
 
 		// add marker to featuregroup		
 		featuregroup.addLayer(marker)
-	});
+	})
 
 	// add featuregroup to map
 	featuregroup.addTo(map);
