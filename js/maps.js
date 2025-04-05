@@ -53,8 +53,8 @@ function readCSV(path){
 			L.control.layers(null, layers).addTo(map);
 
 		}
-	});
-}
+	})
+};
 
 function mapCSV(data, featuregroup, color, name){
 
