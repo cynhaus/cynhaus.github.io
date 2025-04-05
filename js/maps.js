@@ -61,7 +61,7 @@ function mapCSV(data, featuregroup, color, name){
 	// icon
 	var shopIcon = L.icon({
 		iconUrl: 'icons/shops.png',
-		iconSize: [15,15]
+		iconSize: [30,30]
 	})
 
 
