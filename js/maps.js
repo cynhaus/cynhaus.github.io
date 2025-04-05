@@ -50,7 +50,7 @@ function readCSV(path){
 				"Shops": shopmarkers,
 			};
 
-			//L.control.layers(null, layers).addTo(map)
+			L.control.layers(null, layers).addTo(map)
 
 		}
 	});
@@ -82,10 +82,10 @@ function mapCSV(data, featuregroup, color, name){
 	})
 
 	// add featuregroup to map
-	//featuregroup.addTo(map)
+	featuregroup.addTo(map)
 
 	// fit markers to map
-	//map.fitBounds(featuregroup.getBounds())
+	map.fitBounds(featuregroup.getBounds())
 }
 
 
