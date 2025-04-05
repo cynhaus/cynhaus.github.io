@@ -68,7 +68,7 @@ function mapCSV(data, featuregroup, color, name){
 	// loop through each entry
 	data.forEach(function(item,index){
 		// create marker
-		let marker = L.Marker([item.Latitude,item.Longitude],{icon: shopIcon})
+		let marker = L.marker([item.Latitude,item.Longitude],{icon: shopIcon})
 		.on('mouseover', function(){
 			this.bindPopup(`<h3>${item.Name}</h3><p>${item.Description}</p>`).openPopup()
 		})
