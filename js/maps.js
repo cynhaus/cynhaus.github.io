@@ -8,9 +8,9 @@ let globaldata;
 
 // path to csv data
 
-let path = "data/shops.csv"
+let path = "data/shops.csv";
 
-let shopmarkers = L.featureGroup()
+let shopmarkers = L.featureGroup();
 
 let shops;
 
@@ -28,7 +28,7 @@ function createMap()
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
-}
+};
 
 function flyToIndex(lat, lon){
 	map.flyTo([lat,lon],12)
@@ -50,11 +50,11 @@ function readCSV(path){
 				"Shops": shopmarkers,
 			};
 
-			L.control.layers(null, layers).addTo(map)
+			L.control.layers(null, layers).addTo(map);
 
-		}
-	});
-}
+		};
+	})
+};
 
 function mapCSV(data, featuregroup, color, name){
 
@@ -65,7 +65,7 @@ function mapCSV(data, featuregroup, color, name){
 		color: 'white',
 		fillColor: color,
 		fillOpacity: 1
-	}
+	};
 
     console.log(data)
 
@@ -79,13 +79,13 @@ function mapCSV(data, featuregroup, color, name){
 
 		// add marker to featuregroup		
 		featuregroup.addLayer(marker)
-	})
+	});
 
 	// add featuregroup to map
-	featuregroup.addTo(map)
+	featuregroup.addTo(map);
 
 	// fit markers to map
-	map.fitBounds(featuregroup.getBounds())
-}
+	map.fitBounds(featuregroup.getBounds());
+};
 
 
