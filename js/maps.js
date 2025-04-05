@@ -22,7 +22,7 @@ $( document ).ready(function() {
 
 function createMap()
 {
-    map = L.map('map').fitWorld();
+    map = L.map('map').setView([lat,lon], zl);
 
 	L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -48,9 +48,9 @@ function readCSV(path){
 
 			let layers = {
 				"Shops": shopmarkers
-			}
+			};
 
-			L.control.layers(null, layers).addTo(map);
+			//L.control.layers(null, layers).addTo(map);
 
 		}
 	})
