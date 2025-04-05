@@ -48,7 +48,7 @@ function readCSV(path){
 
 			let layers = {
 				"Shops": shopmarkers
-			};
+			}
 
 			L.control.layers(null, layers).addTo(map);
 
