@@ -11,5 +11,8 @@ html, body, #map {
     color:aliceblue;
     overflow: auto;
     padding: 1vw;
+    position: sticky;
+    top: 0;
     font-family: "Silkscreen", sans-serif;
 }
+
