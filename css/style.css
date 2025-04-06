@@ -1,4 +1,4 @@
-html, body, #map {
+html, body {
     height: 100%;
     width: 100%;
     padding: 0;
@@ -6,13 +6,20 @@ html, body, #map {
     font-family: "Mona Sans", sans-serif;
 }
 
-.header{
-    background-color:hotpink;
-    color:aliceblue;
-    overflow: auto;
-    padding: 1vw;
-    position: sticky;
-    top: 0;
-    font-family: "Silkscreen", sans-serif;
+body {
+    display: flex;
+    flex-direction: column;
 }
 
+#map {
+    flex-grow: 1;
+}
+
+.header {
+    background-color: hotpink;
+    color: aliceblue;
+    overflow: hidden;
+    flex-grow: 0;
+    padding: 1vw;
+    font-family: "Silkscreen", sans-serif;
+}
