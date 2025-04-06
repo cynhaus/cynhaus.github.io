@@ -1,11 +1,10 @@
 html, body, #map {
-    height: 100vw;
+    height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
+    font-family: "Commissioner", sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
 .header{
     background-color:hotpink;
