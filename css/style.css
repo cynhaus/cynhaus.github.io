@@ -6,6 +6,11 @@ html, body {
     font-family: "Mona Sans", sans-serif;
 }
 
+title {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     display: flex;
     flex-direction: column;
